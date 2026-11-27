@@ -16,7 +16,7 @@ are very skewed.
 import marimo
 
 __generated_with = "0.10.0"
-app = marimo.App(width="medium")
+app = marimo.App(width="full")
 
 
 @app.cell
@@ -62,7 +62,7 @@ def _(alt):
                       "subtitleColor": "#666", "subtitleFontSize": 11},
             "legend": {"labelColor": "#444", "titleColor": "#666", "labelFontSize": 11},
         }})
-    W, H = 340, 240
+    W, H = 520, 240
     return BLUE, GRAY, H, ORANGE, SIX, W
 
 
@@ -133,7 +133,7 @@ def _(BLUE, H, W, alt, games, mo):
         tooltip=_tip,
     ).properties(width=W, height=H, title=alt.Title("Median reviews per game",
                                                     subtitle="Log scale. Newer games have had less time"))
-    (_count | _med)
+    (_count & _med)
     return
 
 
@@ -170,7 +170,7 @@ def _(BLUE, H, ORANGE, W, alt, coh, mo, pd):
     _b = alt.Chart(_pb).mark_bar(**_bar).encode(
         y=alt.Y("zero_share:Q", title="% of games"), **_enc
     ).properties(width=W, height=H, title="Share of games with zero reviews")
-    (_a | _b)
+    (_a & _b)
     return
 
 
@@ -198,7 +198,7 @@ def _(BLUE, alt, coh, explode, mo):
     _txt2 = alt.Chart(_gs[_gs.genres.isin(_low)]).mark_text(align="right", dx=-7, dy=-6, fontSize=10, color="#555").encode(
         x="games:Q", y="median_reviews:Q", text="genres:N")
     ((_pts + _txt + _txt2).properties(
-        width=700, height=380,
+        width=500, height=360,
         title=alt.Title("Genres: how crowded each one is vs attention per game",
                         subtitle="Genres with 200+ games. Includes non-game software genres")))
     return
@@ -221,7 +221,7 @@ def _(SIX, alt, explode, games, mo):
     _main = _sh.groupby("genres").share.mean().nlargest(6).index.tolist()
     _sh = _sh[_sh.genres.isin(_main)]
     _last = _sh[_sh.release_year == _sh.release_year.max()]
-    _color = alt.Color("genres:N", scale=alt.Scale(domain=_main, range=SIX), title="Genre")
+    _color = alt.Color("genres:N", scale=alt.Scale(domain=_main, range=SIX), legend=None)
     _line = alt.Chart(_sh).mark_line(strokeWidth=2.5).encode(
         x=alt.X("release_year:O", title="Release year", axis=alt.Axis(labelAngle=0)),
         y=alt.Y("share:Q", title="% of that year's top 10% games", scale=alt.Scale(domain=[0, 100])),
@@ -233,7 +233,7 @@ def _(SIX, alt, explode, games, mo):
     _labels = alt.Chart(_last).mark_text(align="left", dx=8, fontSize=11).encode(
         x="release_year:O", y="share:Q", text="genres:N", color=_color)
     ((_line + _dots + _labels).properties(
-        width=680, height=380,
+        width=480, height=360,
         title=alt.Title("Which genres the most reviewed games carry, by year",
                         subtitle=["Top 10% of each year's games by reviews.",
                                   "A game can have several genres, so the lines overlap and do not add up to 100%."])))
@@ -262,7 +262,7 @@ def _(BLUE, H, W, alt, coh, mo, pd):
         width=W, height=H, title=alt.Title("Games by positive review share", subtitle="Games with 10+ reviews"))
     _b = alt.Chart(_rb).mark_bar(**_bar).encode(y=alt.Y("median_reviews:Q", title="Median reviews per game"), **_enc).properties(
         width=W, height=H, title=alt.Title("Median reviews, by positive review share", subtitle="Games with 10+ reviews"))
-    (_a | _b)
+    (_a & _b)
     return
 
 
@@ -315,7 +315,7 @@ def _(BLUE, alt, coh, explode, mo):
         x="games:Q", y="median_reviews:Q", text="tags:N")
     _ctxt = _ctxt + alt.Chart(_crowd.iloc[[1]]).mark_text(align="right", dx=-6, dy=14, fontSize=10, color="#555").encode(
         x="games:Q", y="median_reviews:Q", text="tags:N")
-    _a = (_pts + _txt + _ctxt).properties(width=380, height=320, title=alt.Title(
+    _a = (_pts + _txt + _ctxt).properties(width=470, height=320, title=alt.Title(
         "Tags: how crowded vs attention per game", subtitle="Tags on 300+ games. Hover for names"))
     _bars = alt.Chart(_lift).mark_bar(color=BLUE, cornerRadiusTopRight=3, cornerRadiusBottomRight=3).encode(
         y=alt.Y("tags:N", sort="-x", title=None),
@@ -325,9 +325,9 @@ def _(BLUE, alt, coh, explode, mo):
                  alt.Tooltip("pct_all:Q", format=".1f", title="% of all tagged games")],
     )
     _rule = alt.Chart().mark_rule(color="#888", strokeDash=[3, 3]).encode(x=alt.datum(1))
-    _b = (_bars + _rule).properties(width=280, height=320, title=alt.Title(
+    _b = (_bars + _rule).properties(width=360, height=340, title=alt.Title(
         "Tags most over-represented in the top 1%", subtitle=f"Top 1% = {_cut1:,.0f}+ reviews. Dashed line = same as average"))
-    (_a | _b)
+    (_a & _b)
     return
 
 
@@ -357,7 +357,7 @@ def _(BLUE, GRAY, alt, coh, explode, mo, pd):
                  alt.Tooltip("share:Q", format=".1f", title="% of all reviews")],
     )
     _a_txt = _a_bars.mark_text(align="left", dx=5, fontSize=12, color="#191919").encode(text="label:N", color=alt.value("#191919"))
-    _a = (_a_bars + _a_txt).properties(width=300, height=180, title=alt.Title(
+    _a = (_a_bars + _a_txt).properties(width=440, height=150, title=alt.Title(
         "Share of all reviews held by each group of games", subtitle="Games ranked by review count"))
 
     _pubs = (explode(coh, "publishers").groupby("publishers").total_reviews.sum()
@@ -366,8 +366,8 @@ def _(BLUE, GRAY, alt, coh, explode, mo, pd):
         y=alt.Y("publishers:N", sort="-x", title=None),
         x=alt.X("share:Q", title="% of all reviews"),
         tooltip=[alt.Tooltip("publishers:N", title="Publisher"), alt.Tooltip("share:Q", format=".2f", title="% of all reviews")],
-    ).properties(width=300, height=300, title="Publishers with the most total reviews")
-    (_a | _b)
+    ).properties(width=380, height=300, title="Publishers with the most total reviews")
+    (_a & _b)
     return
 
 
@@ -400,14 +400,12 @@ def _(BLUE, GRAY, H, W, ai, alt, mo):
         xOffset=alt.XOffset("group:N", sort=_dom),
         y=alt.Y("median_reviews:Q", title="Median reviews per game"),
         color=alt.Color("group:N", scale=alt.Scale(domain=_dom, range=[GRAY, BLUE]), title=None,
-                        legend=alt.Legend(orient="right")),
+                        legend=alt.Legend(orient="top")),
         tooltip=[alt.Tooltip("release_year:O", title="Year"), alt.Tooltip("group:N", title="Group"),
                  alt.Tooltip("median_reviews:Q", title="Median reviews"), alt.Tooltip("games:Q", format=",")],
     ).properties(width=W, height=H, title=alt.Title("Median reviews, AI vs no AI",
                                                     subtitle="Compare within a year. Newer games have had less time"))
-    ((_a | _b).properties(
-        title=alt.Title("Source: Steam Games from Jan2024 to Nov2026 (Kaggle)", orient="bottom",
-                        fontSize=10, fontWeight="normal", color="#666")))
+    mo.vstack([_a, _b, mo.md("Source: Steam Games from Jan2024 to Nov2026 (Kaggle).")])
     return
 
 
