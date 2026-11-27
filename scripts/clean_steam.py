@@ -76,8 +76,11 @@ def normalize_names(col):
         return [re.sub(r"\s+", " ", p).strip() for p in s.split(",") if p.strip()]
     lists = df[col].map(split)
     counts = pd.Series([n for l in lists for n in l]).value_counts()
+    # Most common spelling wins. Ties go to the alphabetically first spelling,
+    # so the result is the same on every machine.
+    order = sorted(counts.index, key=lambda n: (-counts[n], n))
     canon = {}
-    for name in counts.index:  # most common first
+    for name in order:
         canon.setdefault(name.casefold(), name)
     changed = sum(1 for n in counts.index if canon[n.casefold()] != n)
     df[col] = lists.map(lambda l: ",".join(dict.fromkeys(canon[n.casefold()] for n in l)))
