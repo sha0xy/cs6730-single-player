@@ -1,0 +1,5 @@
+# Raw data is too large for GitHub. See README for download links.
+data/raw/*
+!data/raw/README.md
+.DS_Store
+__pycache__/

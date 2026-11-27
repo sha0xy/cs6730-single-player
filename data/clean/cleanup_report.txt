@@ -1,0 +1,9 @@
+Raw games: 125,855
+Dates that could not be parsed (dropped): 0
+Unreleased games dropped (after 2026-11-26): 1
+Duplicate app IDs dropped: 0
+Games with zero reviews (kept, no positive_share): 42,898
+Games with no tags (kept, left out of tag analysis): 42,501
+publishers: 534 spelling variants merged
+developers: 697 spelling variants merged
+Clean games written: 125,854 rows, 20 columns

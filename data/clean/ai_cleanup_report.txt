@@ -1,0 +1,10 @@
+Raw games: 63,798
+Dates that could not be parsed (dropped): 0
+Unreleased games dropped: 0
+Duplicate app IDs dropped: 0
+Games with no price (kept, price blank): 70
+Games with too few reviews for a Steam rating (score blank): 33,787
+Games with zero reviews (kept): 9,887
+Games with no tags (kept, left out of tag analysis): 74
+Games with Steam AI disclosure: 17,014
+Clean games written: 63,798 rows, 19 columns
