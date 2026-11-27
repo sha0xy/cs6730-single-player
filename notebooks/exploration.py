@@ -133,7 +133,7 @@ def _(BLUE, H, W, alt, games, mo):
         tooltip=_tip,
     ).properties(width=W, height=H, title=alt.Title("Median reviews per game",
                                                     subtitle="Log scale. Newer games have had less time"))
-    mo.ui.altair_chart(_count | _med)
+    (_count | _med)
     return
 
 
@@ -170,7 +170,7 @@ def _(BLUE, H, ORANGE, W, alt, coh, mo, pd):
     _b = alt.Chart(_pb).mark_bar(**_bar).encode(
         y=alt.Y("zero_share:Q", title="% of games"), **_enc
     ).properties(width=W, height=H, title="Share of games with zero reviews")
-    mo.ui.altair_chart(_a | _b)
+    (_a | _b)
     return
 
 
@@ -197,7 +197,7 @@ def _(BLUE, alt, coh, explode, mo):
         x="games:Q", y="median_reviews:Q", text="genres:N")
     _txt2 = alt.Chart(_gs[_gs.genres.isin(_low)]).mark_text(align="right", dx=-7, dy=-6, fontSize=10, color="#555").encode(
         x="games:Q", y="median_reviews:Q", text="genres:N")
-    mo.ui.altair_chart((_pts + _txt + _txt2).properties(
+    ((_pts + _txt + _txt2).properties(
         width=700, height=380,
         title=alt.Title("Genres: how crowded each one is vs attention per game",
                         subtitle="Genres with 200+ games. Includes non-game software genres")))
@@ -232,7 +232,7 @@ def _(SIX, alt, explode, games, mo):
     _dots = _line.mark_circle(size=30)
     _labels = alt.Chart(_last).mark_text(align="left", dx=8, fontSize=11).encode(
         x="release_year:O", y="share:Q", text="genres:N", color=_color)
-    mo.ui.altair_chart((_line + _dots + _labels).properties(
+    ((_line + _dots + _labels).properties(
         width=680, height=380,
         title=alt.Title("Which genres the most reviewed games carry, by year",
                         subtitle=["Top 10% of each year's games by reviews.",
@@ -262,7 +262,7 @@ def _(BLUE, H, W, alt, coh, mo, pd):
         width=W, height=H, title=alt.Title("Games by positive review share", subtitle="Games with 10+ reviews"))
     _b = alt.Chart(_rb).mark_bar(**_bar).encode(y=alt.Y("median_reviews:Q", title="Median reviews per game"), **_enc).properties(
         width=W, height=H, title=alt.Title("Median reviews, by positive review share", subtitle="Games with 10+ reviews"))
-    mo.ui.altair_chart(_a | _b)
+    (_a | _b)
     return
 
 
@@ -327,7 +327,7 @@ def _(BLUE, alt, coh, explode, mo):
     _rule = alt.Chart().mark_rule(color="#888", strokeDash=[3, 3]).encode(x=alt.datum(1))
     _b = (_bars + _rule).properties(width=280, height=320, title=alt.Title(
         "Tags most over-represented in the top 1%", subtitle=f"Top 1% = {_cut1:,.0f}+ reviews. Dashed line = same as average"))
-    mo.ui.altair_chart(_a | _b)
+    (_a | _b)
     return
 
 
@@ -367,7 +367,7 @@ def _(BLUE, GRAY, alt, coh, explode, mo, pd):
         x=alt.X("share:Q", title="% of all reviews"),
         tooltip=[alt.Tooltip("publishers:N", title="Publisher"), alt.Tooltip("share:Q", format=".2f", title="% of all reviews")],
     ).properties(width=300, height=300, title="Publishers with the most total reviews")
-    mo.ui.altair_chart(_a | _b)
+    (_a | _b)
     return
 
 
@@ -405,7 +405,7 @@ def _(BLUE, GRAY, H, W, ai, alt, mo):
                  alt.Tooltip("median_reviews:Q", title="Median reviews"), alt.Tooltip("games:Q", format=",")],
     ).properties(width=W, height=H, title=alt.Title("Median reviews, AI vs no AI",
                                                     subtitle="Compare within a year. Newer games have had less time"))
-    mo.ui.altair_chart((_a | _b).properties(
+    ((_a | _b).properties(
         title=alt.Title("Source: Steam Games from Jan2024 to Nov2026 (Kaggle)", orient="bottom",
                         fontSize=10, fontWeight="normal", color="#666")))
     return

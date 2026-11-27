@@ -1,0 +1,414 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.26.0",
+    "script_metadata_hash": "598c17af09fa38c40d0f98b408b48cab"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "fd2ef683d2263ddcbbfbd20e4ac8b834",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "5bddc1288017b9e07b6d53b9243410a5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "0142d215b3655677db34f4d00be88683",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "/tmp/marimo_185/__marimo__cell_vblA_.py:16: AltairDeprecationWarning: \nDeprecated since `altair=5.5.0`. Use altair.theme instead.\nMost cases require only the following change:\n\n    # Deprecated\n    alt.themes.enable('quartz')\n\n    # Updated\n    alt.theme.enable('quartz')\n\nIf your code registers a theme, make the following change:\n\n    # Deprecated\n    def custom_theme():\n        return {'height': 400, 'width': 700}\n    alt.themes.register('theme_name', custom_theme)\n    alt.themes.enable('theme_name')\n\n    # Updated\n    @alt.theme.register('theme_name', enable=True)\n    def custom_theme():\n        return alt.theme.ThemeConfig(\n            {'height': 400, 'width': 700}\n        )\n\nSee the updated User Guide for further details:\n    https://altair-viz.github.io/user_guide/api.html#theme\n    https://altair-viz.github.io/user_guide/customization.html#chart-themes\n  alt.themes.register(\"steam\", theme)\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "5d1860d13504bc2e8a52ccbb832e9f49",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "6914bb78e8815822aab12e695d1b2030",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"exploration\">Exploration</h1>\n<span class=\"paragraph\"><strong>125,854</strong> games in the main dataset. Attention charts use the\n<strong>120,568</strong> games released 2014 to 2025, so older games with years of\nreviews do not skew the comparison.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "b3f0617bbb9b2ec8cb581a4747a7513f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"exploration-1-release-year-q1\">Exploration 1. Release year (Q1)</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "9672a34c571051695b4f1b8180637c59",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='Xref-0' random-id='799733a4-631a-8a1f-a455-9e05d0427b8e'><marimo-vega data-initial-value='{}' data-label='null' data-spec='{&quot;config&quot;:{&quot;font&quot;:&quot;Inter, Helvetica, Arial, sans-serif&quot;,&quot;view&quot;:{&quot;stroke&quot;:null},&quot;axis&quot;:{&quot;labelColor&quot;:&quot;#666&quot;,&quot;titleColor&quot;:&quot;#666&quot;,&quot;gridColor&quot;:&quot;#eee&quot;,&quot;domainColor&quot;:&quot;#ccc&quot;,&quot;tickColor&quot;:&quot;#ccc&quot;,&quot;labelFontSize&quot;:11,&quot;titleFontSize&quot;:11,&quot;titleFontWeight&quot;:&quot;normal&quot;},&quot;title&quot;:{&quot;fontSize&quot;:14,&quot;anchor&quot;:&quot;start&quot;,&quot;color&quot;:&quot;#191919&quot;,&quot;subtitleColor&quot;:&quot;#666&quot;,&quot;subtitleFontSize&quot;:11},&quot;legend&quot;:{&quot;labelColor&quot;:&quot;#444&quot;,&quot;titleColor&quot;:&quot;#666&quot;,&quot;labelFontSize&quot;:11}},&quot;hconcat&quot;:&#91;{&quot;mark&quot;:{&quot;type&quot;:&quot;bar&quot;,&quot;color&quot;:&quot;#257de0&quot;,&quot;cornerRadiusTopLeft&quot;:3,&quot;cornerRadiusTopRight&quot;:3},&quot;encoding&quot;:{&quot;opacity&quot;:{&quot;condition&quot;:{&quot;test&quot;:&quot;datum.release_year == 2026&quot;,&quot;value&quot;:0.35},&quot;value&quot;:1},&quot;tooltip&quot;:&#91;{&quot;field&quot;:&quot;release_year&quot;,&quot;title&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;ordinal&quot;},{&quot;field&quot;:&quot;games&quot;,&quot;format&quot;:&quot;,&quot;,&quot;type&quot;:&quot;quantitative&quot;},{&quot;field&quot;:&quot;median_reviews&quot;,&quot;title&quot;:&quot;Median reviews&quot;,&quot;type&quot;:&quot;quantitative&quot;},{&quot;field&quot;:&quot;note&quot;,&quot;type&quot;:&quot;nominal&quot;}&#93;,&quot;x&quot;:{&quot;axis&quot;:{&quot;labelAngle&quot;:-45,&quot;values&quot;:&#91;2006,2008,2010,2012,2014,2016,2018,2020,2022,2024,2026&#93;},&quot;field&quot;:&quot;release_year&quot;,&quot;title&quot;:&quot;Release year&quot;,&quot;type&quot;:&quot;ordinal&quot;},&quot;y&quot;:{&quot;field&quot;:&quot;games&quot;,&quot;title&quot;:&quot;Games released&quot;,&quot;type&quot;:&quot;quantitative&quot;}},&quot;height&quot;:240,&quot;title&quot;:{&quot;text&quot;:&quot;Games released per year&quot;,&quot;subtitle&quot;:&quot;2026 is a partial year&quot;},&quot;width&quot;:340},{&quot;mark&quot;:{&quot;type&quot;:&quot;line&quot;,&quot;color&quot;:&quot;#257de0&quot;,&quot;point&quot;:{&quot;filled&quot;:true,&quot;size&quot;:40},&quot;strokeWidth&quot;:2},&quot;encoding&quot;:{&quot;tooltip&quot;:&#91;{&quot;field&quot;:&quot;release_year&quot;,&quot;title&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;ordinal&quot;},{&quot;field&quot;:&quot;games&quot;,&quot;format&quot;:&quot;,&quot;,&quot;type&quot;:&quot;quantitative&quot;},{&quot;field&quot;:&quot;median_reviews&quot;,&quot;title&quot;:&quot;Median reviews&quot;,&quot;type&quot;:&quot;quantitative&quot;},{&quot;field&quot;:&quot;note&quot;,&quot;type&quot;:&quot;nominal&quot;}&#93;,&quot;x&quot;:{&quot;axis&quot;:{&quot;labelAngle&quot;:-45,&quot;values&quot;:&#91;2006,2008,2010,2012,2014,2016,2018,2020,2022,2024,2026&#93;},&quot;field&quot;:&quot;release_year&quot;,&quot;title&quot;:&quot;Release year&quot;,&quot;type&quot;:&quot;ordinal&quot;},&quot;y&quot;:{&quot;field&quot;:&quot;median_reviews&quot;,&quot;scale&quot;:{&quot;type&quot;:&quot;symlog&quot;},&quot;title&quot;:&quot;Median reviews per game&quot;,&quot;type&quot;:&quot;quantitative&quot;}},&quot;height&quot;:240,&quot;title&quot;:{&quot;text&quot;:&quot;Median reviews per game&quot;,&quot;subtitle&quot;:&quot;Log scale. Newer games have had less time&quot;},&quot;width&quot;:340}&#93;,&quot;data&quot;:{&quot;url&quot;:&quot;data:application/vnd.apache.arrow.file;base64,QVJST1cxAAD/////iAQAABAAAAAAAAoADgAGAAUACAAKAAAAAAEEABAAAAAAAAoADAAAAAQACAAKAAAAXAMAAAQAAAABAAAADAAAAAgADAAEAAgACAAAADQDAAAEAAAAJQMAAHsiaW5kZXhfY29sdW1ucyI6IFt7ImtpbmQiOiAicmFuZ2UiLCAibmFtZSI6IG51bGwsICJzdGFydCI6IDAsICJzdG9wIjogMjEsICJzdGVwIjogMX1dLCAiY29sdW1uX2luZGV4ZXMiOiBbeyJuYW1lIjogbnVsbCwgImZpZWxkX25hbWUiOiBudWxsLCAicGFuZGFzX3R5cGUiOiAidW5pY29kZSIsICJudW1weV90eXBlIjogInN0ciIsICJtZXRhZGF0YSI6IHsiZW5jb2RpbmciOiAiVVRGLTgifX1dLCAiY29sdW1ucyI6IFt7Im5hbWUiOiAicmVsZWFzZV95ZWFyIiwgImZpZWxkX25hbWUiOiAicmVsZWFzZV95ZWFyIiwgInBhbmRhc190eXBlIjogImludDY0IiwgIm51bXB5X3R5cGUiOiAib2JqZWN0IiwgIm1ldGFkYXRhIjogbnVsbH0sIHsibmFtZSI6ICJnYW1lcyIsICJmaWVsZF9uYW1lIjogImdhbWVzIiwgInBhbmRhc190eXBlIjogImludDY0IiwgIm51bXB5X3R5cGUiOiAib2JqZWN0IiwgIm1ldGFkYXRhIjogbnVsbH0sIHsibmFtZSI6ICJtZWRpYW5fcmV2aWV3cyIsICJmaWVsZF9uYW1lIjogIm1lZGlhbl9yZXZpZXdzIiwgInBhbmRhc190eXBlIjogImZsb2F0NjQiLCAibnVtcHlfdHlwZSI6ICJvYmplY3QiLCAibWV0YWRhdGEiOiBudWxsfSwgeyJuYW1lIjogIm5vdGUiLCAiZmllbGRfbmFtZSI6ICJub3RlIiwgInBhbmRhc190eXBlIjogInVuaWNvZGUiLCAibnVtcHlfdHlwZSI6ICJvYmplY3QiLCAibWV0YWRhdGEiOiBudWxsfV0sICJhdHRyaWJ1dGVzIjoge30sICJjcmVhdG9yIjogeyJsaWJyYXJ5IjogInB5YXJyb3ciLCAidmVyc2lvbiI6ICIyNi4wLjEifSwgInBhbmRhc192ZXJzaW9uIjogIjMu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&quot;,&quot;format&quot;:{&quot;type&quot;:&quot;arrow&quot;}},&quot;&#36;schema&quot;:&quot;https://vega.github.io/schema/vega-lite/v6.4.1.json&quot;}' data-chart-selection='true' data-field-selection='true' data-embed-options='{}'></marimo-vega></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "2be2d6c7acf09a111e3d4125318ebd27",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"exploration-2-price-q2-q3\">Exploration 2. Price (Q2, Q3)</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "7a0f0b1a7e6801d1b0fc7717e20a1a9b",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'a' was defined by another cell",
+          "traceback": [],
+          "code": "bins = [-0.01, 0, 4.99, 9.99, 19.99, 29.99, 59.99, 10_000]\nlabels = [\"Free\", \"$0.01 to 4.99\", \"$5 to 9.99\", \"$10 to 19.99\", \"$20 to 29.99\",\n          \"$30 to 59.99\", \"$60+\"]\npb = (coh.assign(price_band=pd.cut(coh.price, bins=bins, labels=labels))\n      .groupby(\"price_band\", observed=True)\n      .agg(games=(\"app_id\", \"size\"), median_reviews=(\"total_reviews\", \"median\"),\n           zero_share=(\"has_reviews\", lambda s: (1 - s.mean()) * 100))\n      .reset_index())\npb[\"is_free\"] = pb.price_band.astype(str) == \"Free\"\npb[\"price_band\"] = pb.price_band.astype(str)\nenc = dict(\n    x=alt.X(\"price_band:N\", sort=labels, title=None, axis=alt.Axis(labelAngle=-30)),\n    color=alt.Color(\"is_free:N\", scale=alt.Scale(domain=[True, False], range=[ORANGE, BLUE]),\n                    legend=None),\n    tooltip=[alt.Tooltip(\"price_band:N\", title=\"Price\"), alt.Tooltip(\"games:Q\", format=\",\"),\n             alt.Tooltip(\"median_reviews:Q\", title=\"Median reviews\"),\n             alt.Tooltip(\"zero_share:Q\", title=\"% with zero reviews\", format=\".1f\")],\n)\nbar = dict(cornerRadiusTopLeft=3, cornerRadiusTopRight=3)\na = alt.Chart(pb).mark_bar(**bar).encode(\n    y=alt.Y(\"median_reviews:Q\", title=\"Median reviews per game\"), **enc\n).properties(width=W, height=H, title=\"Median reviews per game, by price\")\nb = alt.Chart(pb).mark_bar(**bar).encode(\n    y=alt.Y(\"zero_share:Q\", title=\"% of games\"), **enc\n).properties(width=W, height=H, title=\"Share of games with zero reviews\")\nmo.ui.altair_chart(a | b)"
+        },
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'b' was defined by another cell",
+          "traceback": [],
+          "code": "bins = [-0.01, 0, 4.99, 9.99, 19.99, 29.99, 59.99, 10_000]\nlabels = [\"Free\", \"$0.01 to 4.99\", \"$5 to 9.99\", \"$10 to 19.99\", \"$20 to 29.99\",\n          \"$30 to 59.99\", \"$60+\"]\npb = (coh.assign(price_band=pd.cut(coh.price, bins=bins, labels=labels))\n      .groupby(\"price_band\", observed=True)\n      .agg(games=(\"app_id\", \"size\"), median_reviews=(\"total_reviews\", \"median\"),\n           zero_share=(\"has_reviews\", lambda s: (1 - s.mean()) * 100))\n      .reset_index())\npb[\"is_free\"] = pb.price_band.astype(str) == \"Free\"\npb[\"price_band\"] = pb.price_band.astype(str)\nenc = dict(\n    x=alt.X(\"price_band:N\", sort=labels, title=None, axis=alt.Axis(labelAngle=-30)),\n    color=alt.Color(\"is_free:N\", scale=alt.Scale(domain=[True, False], range=[ORANGE, BLUE]),\n                    legend=None),\n    tooltip=[alt.Tooltip(\"price_band:N\", title=\"Price\"), alt.Tooltip(\"games:Q\", format=\",\"),\n             alt.Tooltip(\"median_reviews:Q\", title=\"Median reviews\"),\n             alt.Tooltip(\"zero_share:Q\", title=\"% with zero reviews\", format=\".1f\")],\n)\nbar = dict(cornerRadiusTopLeft=3, cornerRadiusTopRight=3)\na = alt.Chart(pb).mark_bar(**bar).encode(\n    y=alt.Y(\"median_reviews:Q\", title=\"Median reviews per game\"), **enc\n).properties(width=W, height=H, title=\"Median reviews per game, by price\")\nb = alt.Chart(pb).mark_bar(**bar).encode(\n    y=alt.Y(\"zero_share:Q\", title=\"% of games\"), **enc\n).properties(width=W, height=H, title=\"Share of games with zero reviews\")\nmo.ui.altair_chart(a | b)"
+        },
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'bar' was defined by another cell",
+          "traceback": [],
+          "code": "bins = [-0.01, 0, 4.99, 9.99, 19.99, 29.99, 59.99, 10_000]\nlabels = [\"Free\", \"$0.01 to 4.99\", \"$5 to 9.99\", \"$10 to 19.99\", \"$20 to 29.99\",\n          \"$30 to 59.99\", \"$60+\"]\npb = (coh.assign(price_band=pd.cut(coh.price, bins=bins, labels=labels))\n      .groupby(\"price_band\", observed=True)\n      .agg(games=(\"app_id\", \"size\"), median_reviews=(\"total_reviews\", \"median\"),\n           zero_share=(\"has_reviews\", lambda s: (1 - s.mean()) * 100))\n      .reset_index())\npb[\"is_free\"] = pb.price_band.astype(str) == \"Free\"\npb[\"price_band\"] = pb.price_band.astype(str)\nenc = dict(\n    x=alt.X(\"price_band:N\", sort=labels, title=None, axis=alt.Axis(labelAngle=-30)),\n    color=alt.Color(\"is_free:N\", scale=alt.Scale(domain=[True, False], range=[ORANGE, BLUE]),\n                    legend=None),\n    tooltip=[alt.Tooltip(\"price_band:N\", title=\"Price\"), alt.Tooltip(\"games:Q\", format=\",\"),\n             alt.Tooltip(\"median_reviews:Q\", title=\"Median reviews\"),\n             alt.Tooltip(\"zero_share:Q\", title=\"% with zero reviews\", format=\".1f\")],\n)\nbar = dict(cornerRadiusTopLeft=3, cornerRadiusTopRight=3)\na = alt.Chart(pb).mark_bar(**bar).encode(\n    y=alt.Y(\"median_reviews:Q\", title=\"Median reviews per game\"), **enc\n).properties(width=W, height=H, title=\"Median reviews per game, by price\")\nb = alt.Chart(pb).mark_bar(**bar).encode(\n    y=alt.Y(\"zero_share:Q\", title=\"% of games\"), **enc\n).properties(width=W, height=H, title=\"Share of games with zero reviews\")\nmo.ui.altair_chart(a | b)"
+        },
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'enc' was defined by another cell",
+          "traceback": [],
+          "code": "bins = [-0.01, 0, 4.99, 9.99, 19.99, 29.99, 59.99, 10_000]\nlabels = [\"Free\", \"$0.01 to 4.99\", \"$5 to 9.99\", \"$10 to 19.99\", \"$20 to 29.99\",\n          \"$30 to 59.99\", \"$60+\"]\npb = (coh.assign(price_band=pd.cut(coh.price, bins=bins, labels=labels))\n      .groupby(\"price_band\", observed=True)\n      .agg(games=(\"app_id\", \"size\"), median_reviews=(\"total_reviews\", \"median\"),\n           zero_share=(\"has_reviews\", lambda s: (1 - s.mean()) * 100))\n      .reset_index())\npb[\"is_free\"] = pb.price_band.astype(str) == \"Free\"\npb[\"price_band\"] = pb.price_band.astype(str)\nenc = dict(\n    x=alt.X(\"price_band:N\", sort=labels, title=None, axis=alt.Axis(labelAngle=-30)),\n    color=alt.Color(\"is_free:N\", scale=alt.Scale(domain=[True, False], range=[ORANGE, BLUE]),\n                    legend=None),\n    tooltip=[alt.Tooltip(\"price_band:N\", title=\"Price\"), alt.Tooltip(\"games:Q\", format=\",\"),\n             alt.Tooltip(\"median_reviews:Q\", title=\"Median reviews\"),\n             alt.Tooltip(\"zero_share:Q\", title=\"% with zero reviews\", format=\".1f\")],\n)\nbar = dict(cornerRadiusTopLeft=3, cornerRadiusTopRight=3)\na = alt.Chart(pb).mark_bar(**bar).encode(\n    y=alt.Y(\"median_reviews:Q\", title=\"Median reviews per game\"), **enc\n).properties(width=W, height=H, title=\"Median reviews per game, by price\")\nb = alt.Chart(pb).mark_bar(**bar).encode(\n    y=alt.Y(\"zero_share:Q\", title=\"% of games\"), **enc\n).properties(width=W, height=H, title=\"Share of games with zero reviews\")\nmo.ui.altair_chart(a | b)"
+        },
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'labels' was defined by another cell",
+          "traceback": [],
+          "code": "bins = [-0.01, 0, 4.99, 9.99, 19.99, 29.99, 59.99, 10_000]\nlabels = [\"Free\", \"$0.01 to 4.99\", \"$5 to 9.99\", \"$10 to 19.99\", \"$20 to 29.99\",\n          \"$30 to 59.99\", \"$60+\"]\npb = (coh.assign(price_band=pd.cut(coh.price, bins=bins, labels=labels))\n      .groupby(\"price_band\", observed=True)\n      .agg(games=(\"app_id\", \"size\"), median_reviews=(\"total_reviews\", \"median\"),\n           zero_share=(\"has_reviews\", lambda s: (1 - s.mean()) * 100))\n      .reset_index())\npb[\"is_free\"] = pb.price_band.astype(str) == \"Free\"\npb[\"price_band\"] = pb.price_band.astype(str)\nenc = dict(\n    x=alt.X(\"price_band:N\", sort=labels, title=None, axis=alt.Axis(labelAngle=-30)),\n    color=alt.Color(\"is_free:N\", scale=alt.Scale(domain=[True, False], range=[ORANGE, BLUE]),\n                    legend=None),\n    tooltip=[alt.Tooltip(\"price_band:N\", title=\"Price\"), alt.Tooltip(\"games:Q\", format=\",\"),\n             alt.Tooltip(\"median_reviews:Q\", title=\"Median reviews\"),\n             alt.Tooltip(\"zero_share:Q\", title=\"% with zero reviews\", format=\".1f\")],\n)\nbar = dict(cornerRadiusTopLeft=3, cornerRadiusTopRight=3)\na = alt.Chart(pb).mark_bar(**bar).encode(\n    y=alt.Y(\"median_reviews:Q\", title=\"Median reviews per game\"), **enc\n).properties(width=W, height=H, title=\"Median reviews per game, by price\")\nb = alt.Chart(pb).mark_bar(**bar).encode(\n    y=alt.Y(\"zero_share:Q\", title=\"% of games\"), **enc\n).properties(width=W, height=H, title=\"Share of games with zero reviews\")\nmo.ui.altair_chart(a | b)"
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "b0ac50c6ff9b94bd9c03fea02a4adff0",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"exploration-3-genres-crowded-vs-attention-q4-q5\">Exploration 3. Genres, crowded vs attention (Q4, Q5)</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "771cba4df4abab7850603bc831e6f49d",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'pts' was defined by another cell",
+          "traceback": [],
+          "code": "gs = (explode(coh, \"genres\").groupby(\"genres\")\n      .agg(games=(\"app_id\", \"size\"), median_reviews=(\"total_reviews\", \"median\"))\n      .reset_index())\ngs = gs[gs.games >= 200]\npts = alt.Chart(gs).mark_circle(size=90, color=BLUE, opacity=0.9, stroke=\"white\", strokeWidth=1.5).encode(\n    x=alt.X(\"games:Q\", scale=alt.Scale(type=\"log\"), title=\"Games with this genre (log scale). Further right = more crowded\"),\n    y=alt.Y(\"median_reviews:Q\", title=\"Median reviews per game\"),\n    tooltip=[alt.Tooltip(\"genres:N\", title=\"Genre\"), alt.Tooltip(\"games:Q\", format=\",\"),\n             alt.Tooltip(\"median_reviews:Q\", title=\"Median reviews\")],\n)\ntxt = pts.mark_text(align=\"left\", dx=7, dy=-6, fontSize=10, color=\"#555\").encode(text=\"genres:N\")\nmo.ui.altair_chart((pts + txt).properties(\n    width=700, height=380,\n    title=alt.Title(\"Genres: how crowded each one is vs attention per game\",\n                    subtitle=\"Genres with 200+ games. Includes non-game software genres\")))"
+        },
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'txt' was defined by another cell",
+          "traceback": [],
+          "code": "gs = (explode(coh, \"genres\").groupby(\"genres\")\n      .agg(games=(\"app_id\", \"size\"), median_reviews=(\"total_reviews\", \"median\"))\n      .reset_index())\ngs = gs[gs.games >= 200]\npts = alt.Chart(gs).mark_circle(size=90, color=BLUE, opacity=0.9, stroke=\"white\", strokeWidth=1.5).encode(\n    x=alt.X(\"games:Q\", scale=alt.Scale(type=\"log\"), title=\"Games with this genre (log scale). Further right = more crowded\"),\n    y=alt.Y(\"median_reviews:Q\", title=\"Median reviews per game\"),\n    tooltip=[alt.Tooltip(\"genres:N\", title=\"Genre\"), alt.Tooltip(\"games:Q\", format=\",\"),\n             alt.Tooltip(\"median_reviews:Q\", title=\"Median reviews\")],\n)\ntxt = pts.mark_text(align=\"left\", dx=7, dy=-6, fontSize=10, color=\"#555\").encode(text=\"genres:N\")\nmo.ui.altair_chart((pts + txt).properties(\n    width=700, height=380,\n    title=alt.Title(\"Genres: how crowded each one is vs attention per game\",\n                    subtitle=\"Genres with 200+ games. Includes non-game software genres\")))"
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "8d1b527f04c06638d76acbd6bfd895ac",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"exploration-4-genres-of-the-top-games-over-time-q14\">Exploration 4. Genres of the top games over time (Q14)</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "2036f4cb614acc2b91025711dfb0f1ae",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'labels' was defined by another cell",
+          "traceback": [],
+          "code": "g2 = games[(games.release_year >= 2010) & (games.release_year <= 2025)].copy()\ncut = g2.groupby(\"release_year\").total_reviews.transform(lambda s: s.quantile(0.9))\ntop = g2[g2.total_reviews >= cut]\nn_top = top.groupby(\"release_year\").app_id.nunique()\nsh = (explode(top, \"genres\").groupby([\"release_year\", \"genres\"]).app_id.nunique()\n      .div(n_top, level=\"release_year\").mul(100).rename(\"share\").reset_index())\nmain = sh.groupby(\"genres\").share.mean().nlargest(6).index.tolist()\nsh = sh[sh.genres.isin(main)]\nlast = sh[sh.release_year == sh.release_year.max()]\ncolor = alt.Color(\"genres:N\", scale=alt.Scale(domain=main, range=SIX), title=\"Genre\")\nline = alt.Chart(sh).mark_line(strokeWidth=2.5).encode(\n    x=alt.X(\"release_year:O\", title=\"Release year\", axis=alt.Axis(labelAngle=0)),\n    y=alt.Y(\"share:Q\", title=\"% of that year's top 10% games\", scale=alt.Scale(domain=[0, 100])),\n    color=color,\n    tooltip=[alt.Tooltip(\"genres:N\", title=\"Genre\"), alt.Tooltip(\"release_year:O\", title=\"Year\"),\n             alt.Tooltip(\"share:Q\", title=\"% of top games\", format=\".1f\")],\n)\ndots = line.mark_circle(size=30)\nlabels = alt.Chart(last).mark_text(align=\"left\", dx=8, fontSize=11).encode(\n    x=\"release_year:O\", y=\"share:Q\", text=\"genres:N\", color=color)\nmo.ui.altair_chart((line + dots + labels).properties(\n    width=680, height=380,\n    title=alt.Title(\"Which genres the most reviewed games carry, by year\",\n                    subtitle=[\"Top 10% of each year's games by reviews.\",\n                              \"A game can have several genres, so the lines overlap and do not add up to 100%.\"])))"
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "fbf6a5ffb584a0bb777b4af886075d08",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"exploration-5-rating-vs-attention-q6-q7-q9\">Exploration 5. Rating vs attention (Q6, Q7, Q9)</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "a7027b6ba4683751c9abd6ea0f6bae0a",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'a' was defined by another cell",
+          "traceback": [],
+          "code": "rated = coh[coh.total_reviews >= 10].copy()\nrated[\"band\"] = pd.cut(rated.positive_share * 100, bins=range(0, 101, 10), include_lowest=True)\nrb = (rated.groupby(\"band\", observed=True)\n      .agg(games=(\"app_id\", \"size\"), median_reviews=(\"total_reviews\", \"median\")).reset_index())\nrb[\"band\"] = [f\"{int(max(i.left, 0))} to {int(i.right)}%\" for i in rb.band]\norder = rb.band.tolist()\nenc = dict(x=alt.X(\"band:N\", sort=order, title=\"Positive review share\", axis=alt.Axis(labelAngle=-30)),\n           tooltip=[alt.Tooltip(\"band:N\", title=\"Positive share\"), alt.Tooltip(\"games:Q\", format=\",\"),\n                    alt.Tooltip(\"median_reviews:Q\", title=\"Median reviews\")])\nbar = dict(color=BLUE, cornerRadiusTopLeft=3, cornerRadiusTopRight=3)\na = alt.Chart(rb).mark_bar(**bar).encode(y=alt.Y(\"games:Q\", title=\"Games\"), **enc).properties(\n    width=W, height=H, title=alt.Title(\"Games by positive review share\", subtitle=\"Games with 10+ reviews\"))\nb = alt.Chart(rb).mark_bar(**bar).encode(y=alt.Y(\"median_reviews:Q\", title=\"Median reviews per game\"), **enc).properties(\n    width=W, height=H, title=alt.Title(\"Median reviews, by positive review share\", subtitle=\"Games with 10+ reviews\"))\nmo.ui.altair_chart(a | b)"
+        },
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'b' was defined by another cell",
+          "traceback": [],
+          "code": "rated = coh[coh.total_reviews >= 10].copy()\nrated[\"band\"] = pd.cut(rated.positive_share * 100, bins=range(0, 101, 10), include_lowest=True)\nrb = (rated.groupby(\"band\", observed=True)\n      .agg(games=(\"app_id\", \"size\"), median_reviews=(\"total_reviews\", \"median\")).reset_index())\nrb[\"band\"] = [f\"{int(max(i.left, 0))} to {int(i.right)}%\" for i in rb.band]\norder = rb.band.tolist()\nenc = dict(x=alt.X(\"band:N\", sort=order, title=\"Positive review share\", axis=alt.Axis(labelAngle=-30)),\n           tooltip=[alt.Tooltip(\"band:N\", title=\"Positive share\"), alt.Tooltip(\"games:Q\", format=\",\"),\n                    alt.Tooltip(\"median_reviews:Q\", title=\"Median reviews\")])\nbar = dict(color=BLUE, cornerRadiusTopLeft=3, cornerRadiusTopRight=3)\na = alt.Chart(rb).mark_bar(**bar).encode(y=alt.Y(\"games:Q\", title=\"Games\"), **enc).properties(\n    width=W, height=H, title=alt.Title(\"Games by positive review share\", subtitle=\"Games with 10+ reviews\"))\nb = alt.Chart(rb).mark_bar(**bar).encode(y=alt.Y(\"median_reviews:Q\", title=\"Median reviews per game\"), **enc).properties(\n    width=W, height=H, title=alt.Title(\"Median reviews, by positive review share\", subtitle=\"Games with 10+ reviews\"))\nmo.ui.altair_chart(a | b)"
+        },
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'bar' was defined by another cell",
+          "traceback": [],
+          "code": "rated = coh[coh.total_reviews >= 10].copy()\nrated[\"band\"] = pd.cut(rated.positive_share * 100, bins=range(0, 101, 10), include_lowest=True)\nrb = (rated.groupby(\"band\", observed=True)\n      .agg(games=(\"app_id\", \"size\"), median_reviews=(\"total_reviews\", \"median\")).reset_index())\nrb[\"band\"] = [f\"{int(max(i.left, 0))} to {int(i.right)}%\" for i in rb.band]\norder = rb.band.tolist()\nenc = dict(x=alt.X(\"band:N\", sort=order, title=\"Positive review share\", axis=alt.Axis(labelAngle=-30)),\n           tooltip=[alt.Tooltip(\"band:N\", title=\"Positive share\"), alt.Tooltip(\"games:Q\", format=\",\"),\n                    alt.Tooltip(\"median_reviews:Q\", title=\"Median reviews\")])\nbar = dict(color=BLUE, cornerRadiusTopLeft=3, cornerRadiusTopRight=3)\na = alt.Chart(rb).mark_bar(**bar).encode(y=alt.Y(\"games:Q\", title=\"Games\"), **enc).properties(\n    width=W, height=H, title=alt.Title(\"Games by positive review share\", subtitle=\"Games with 10+ reviews\"))\nb = alt.Chart(rb).mark_bar(**bar).encode(y=alt.Y(\"median_reviews:Q\", title=\"Median reviews per game\"), **enc).properties(\n    width=W, height=H, title=alt.Title(\"Median reviews, by positive review share\", subtitle=\"Games with 10+ reviews\"))\nmo.ui.altair_chart(a | b)"
+        },
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'enc' was defined by another cell",
+          "traceback": [],
+          "code": "rated = coh[coh.total_reviews >= 10].copy()\nrated[\"band\"] = pd.cut(rated.positive_share * 100, bins=range(0, 101, 10), include_lowest=True)\nrb = (rated.groupby(\"band\", observed=True)\n      .agg(games=(\"app_id\", \"size\"), median_reviews=(\"total_reviews\", \"median\")).reset_index())\nrb[\"band\"] = [f\"{int(max(i.left, 0))} to {int(i.right)}%\" for i in rb.band]\norder = rb.band.tolist()\nenc = dict(x=alt.X(\"band:N\", sort=order, title=\"Positive review share\", axis=alt.Axis(labelAngle=-30)),\n           tooltip=[alt.Tooltip(\"band:N\", title=\"Positive share\"), alt.Tooltip(\"games:Q\", format=\",\"),\n                    alt.Tooltip(\"median_reviews:Q\", title=\"Median reviews\")])\nbar = dict(color=BLUE, cornerRadiusTopLeft=3, cornerRadiusTopRight=3)\na = alt.Chart(rb).mark_bar(**bar).encode(y=alt.Y(\"games:Q\", title=\"Games\"), **enc).properties(\n    width=W, height=H, title=alt.Title(\"Games by positive review share\", subtitle=\"Games with 10+ reviews\"))\nb = alt.Chart(rb).mark_bar(**bar).encode(y=alt.Y(\"median_reviews:Q\", title=\"Median reviews per game\"), **enc).properties(\n    width=W, height=H, title=alt.Title(\"Median reviews, by positive review share\", subtitle=\"Games with 10+ reviews\"))\nmo.ui.altair_chart(a | b)"
+        },
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'order' was defined by another cell",
+          "traceback": [],
+          "code": "rated = coh[coh.total_reviews >= 10].copy()\nrated[\"band\"] = pd.cut(rated.positive_share * 100, bins=range(0, 101, 10), include_lowest=True)\nrb = (rated.groupby(\"band\", observed=True)\n      .agg(games=(\"app_id\", \"size\"), median_reviews=(\"total_reviews\", \"median\")).reset_index())\nrb[\"band\"] = [f\"{int(max(i.left, 0))} to {int(i.right)}%\" for i in rb.band]\norder = rb.band.tolist()\nenc = dict(x=alt.X(\"band:N\", sort=order, title=\"Positive review share\", axis=alt.Axis(labelAngle=-30)),\n           tooltip=[alt.Tooltip(\"band:N\", title=\"Positive share\"), alt.Tooltip(\"games:Q\", format=\",\"),\n                    alt.Tooltip(\"median_reviews:Q\", title=\"Median reviews\")])\nbar = dict(color=BLUE, cornerRadiusTopLeft=3, cornerRadiusTopRight=3)\na = alt.Chart(rb).mark_bar(**bar).encode(y=alt.Y(\"games:Q\", title=\"Games\"), **enc).properties(\n    width=W, height=H, title=alt.Title(\"Games by positive review share\", subtitle=\"Games with 10+ reviews\"))\nb = alt.Chart(rb).mark_bar(**bar).encode(y=alt.Y(\"median_reviews:Q\", title=\"Median reviews per game\"), **enc).properties(\n    width=W, height=H, title=alt.Title(\"Median reviews, by positive review share\", subtitle=\"Games with 10+ reviews\"))\nmo.ui.altair_chart(a | b)"
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZHCJ",
+      "code_hash": "4fbbb029af5cb2e100bd9e44176c50db",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\"><strong>Q8 playtime.</strong> 80% of games have a median playtime of 0,\nso playtime cannot be compared fairly. Among games with 1,000+ reviews,\n3% are 0.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "5c9f4b7a06ae8fa16f08a5197742a0a7",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"exploration-6-tags-q11-q12\">Exploration 6. Tags (Q11, Q12)</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "215ab61ebcc482834f52d5b082a26efe",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'a' was defined by another cell",
+          "traceback": [],
+          "code": "tagged = coh[coh.has_tags]\nte = explode(tagged, \"tags\")\nts = (te.groupby(\"tags\").agg(games=(\"app_id\", \"size\"), median_reviews=(\"total_reviews\", \"median\"))\n      .reset_index())\nts = ts[ts.games >= 300]\ncut1 = tagged.total_reviews.quantile(0.99)\ntopg = tagged[tagged.total_reviews >= cut1]\nin_top = explode(topg, \"tags\").groupby(\"tags\").app_id.nunique() / len(topg)\nin_all = te.groupby(\"tags\").app_id.nunique() / len(tagged)\nlift = (in_top / in_all).dropna().rename(\"lift\").reset_index()\nlift = lift.merge(ts[[\"tags\", \"games\"]], on=\"tags\")\nlift[\"pct_top\"] = lift.tags.map(in_top) * 100\nlift[\"pct_all\"] = lift.tags.map(in_all) * 100\nlift = lift.nlargest(15, \"lift\")\n\nshow = set(ts.nlargest(5, \"games\").tags) | set(ts.nlargest(8, \"median_reviews\").tags)\npts = alt.Chart(ts).mark_circle(size=40, color=BLUE, opacity=0.7).encode(\n    x=alt.X(\"games:Q\", scale=alt.Scale(type=\"log\"), title=\"Games with this tag (log scale)\"),\n    y=alt.Y(\"median_reviews:Q\", title=\"Median reviews per game\"),\n    tooltip=[alt.Tooltip(\"tags:N\", title=\"Tag\"), alt.Tooltip(\"games:Q\", format=\",\"),\n             alt.Tooltip(\"median_reviews:Q\", title=\"Median reviews\")],\n)\ntxt = alt.Chart(ts[ts.tags.isin(show)]).mark_text(align=\"left\", dx=6, dy=-5, fontSize=10, color=\"#555\").encode(\n    x=\"games:Q\", y=\"median_reviews:Q\", text=\"tags:N\")\na = (pts + txt).properties(width=380, height=320, title=alt.Title(\n    \"Tags: how crowded vs attention per game\", subtitle=\"Tags on 300+ games. Hover for names\"))\nbars = alt.Chart(lift).mark_bar(color=BLUE, cornerRadiusTopRight=3, cornerRadiusBottomRight=3).encode(\n    y=alt.Y(\"tags:N\", sort=\"-x\", title=None),\n    x=alt.X(\"lift:Q\", title=\"Times more common in top 1% games\"),\n    tooltip=[alt.Tooltip(\"tags:N\", title=\"Tag\"), alt.Tooltip(\"lift:Q\", format=\".1f\", title=\"Times more common\"),\n             alt.Tooltip(\"pct_top:Q\", format=\".1f\", title=\"% of top 1% games\"),\n             alt.Tooltip(\"pct_all:Q\", format=\".1f\", title=\"% of all tagged games\")],\n)\nrule = alt.Chart().mark_rule(color=\"#888\", strokeDash=[3, 3]).encode(x=alt.datum(1))\nb = (bars + rule).properties(width=280, height=320, title=alt.Title(\n    \"Tags most over-represented in the top 1%\", subtitle=f\"Top 1% = {cut1:,.0f}+ reviews. Dashed line = same as average\"))\nmo.ui.altair_chart(a | b)"
+        },
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'b' was defined by another cell",
+          "traceback": [],
+          "code": "tagged = coh[coh.has_tags]\nte = explode(tagged, \"tags\")\nts = (te.groupby(\"tags\").agg(games=(\"app_id\", \"size\"), median_reviews=(\"total_reviews\", \"median\"))\n      .reset_index())\nts = ts[ts.games >= 300]\ncut1 = tagged.total_reviews.quantile(0.99)\ntopg = tagged[tagged.total_reviews >= cut1]\nin_top = explode(topg, \"tags\").groupby(\"tags\").app_id.nunique() / len(topg)\nin_all = te.groupby(\"tags\").app_id.nunique() / len(tagged)\nlift = (in_top / in_all).dropna().rename(\"lift\").reset_index()\nlift = lift.merge(ts[[\"tags\", \"games\"]], on=\"tags\")\nlift[\"pct_top\"] = lift.tags.map(in_top) * 100\nlift[\"pct_all\"] = lift.tags.map(in_all) * 100\nlift = lift.nlargest(15, \"lift\")\n\nshow = set(ts.nlargest(5, \"games\").tags) | set(ts.nlargest(8, \"median_reviews\").tags)\npts = alt.Chart(ts).mark_circle(size=40, color=BLUE, opacity=0.7).encode(\n    x=alt.X(\"games:Q\", scale=alt.Scale(type=\"log\"), title=\"Games with this tag (log scale)\"),\n    y=alt.Y(\"median_reviews:Q\", title=\"Median reviews per game\"),\n    tooltip=[alt.Tooltip(\"tags:N\", title=\"Tag\"), alt.Tooltip(\"games:Q\", format=\",\"),\n             alt.Tooltip(\"median_reviews:Q\", title=\"Median reviews\")],\n)\ntxt = alt.Chart(ts[ts.tags.isin(show)]).mark_text(align=\"left\", dx=6, dy=-5, fontSize=10, color=\"#555\").encode(\n    x=\"games:Q\", y=\"median_reviews:Q\", text=\"tags:N\")\na = (pts + txt).properties(width=380, height=320, title=alt.Title(\n    \"Tags: how crowded vs attention per game\", subtitle=\"Tags on 300+ games. Hover for names\"))\nbars = alt.Chart(lift).mark_bar(color=BLUE, cornerRadiusTopRight=3, cornerRadiusBottomRight=3).encode(\n    y=alt.Y(\"tags:N\", sort=\"-x\", title=None),\n    x=alt.X(\"lift:Q\", title=\"Times more common in top 1% games\"),\n    tooltip=[alt.Tooltip(\"tags:N\", title=\"Tag\"), alt.Tooltip(\"lift:Q\", format=\".1f\", title=\"Times more common\"),\n             alt.Tooltip(\"pct_top:Q\", format=\".1f\", title=\"% of top 1% games\"),\n             alt.Tooltip(\"pct_all:Q\", format=\".1f\", title=\"% of all tagged games\")],\n)\nrule = alt.Chart().mark_rule(color=\"#888\", strokeDash=[3, 3]).encode(x=alt.datum(1))\nb = (bars + rule).properties(width=280, height=320, title=alt.Title(\n    \"Tags most over-represented in the top 1%\", subtitle=f\"Top 1% = {cut1:,.0f}+ reviews. Dashed line = same as average\"))\nmo.ui.altair_chart(a | b)"
+        },
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'pts' was defined by another cell",
+          "traceback": [],
+          "code": "tagged = coh[coh.has_tags]\nte = explode(tagged, \"tags\")\nts = (te.groupby(\"tags\").agg(games=(\"app_id\", \"size\"), median_reviews=(\"total_reviews\", \"median\"))\n      .reset_index())\nts = ts[ts.games >= 300]\ncut1 = tagged.total_reviews.quantile(0.99)\ntopg = tagged[tagged.total_reviews >= cut1]\nin_top = explode(topg, \"tags\").groupby(\"tags\").app_id.nunique() / len(topg)\nin_all = te.groupby(\"tags\").app_id.nunique() / len(tagged)\nlift = (in_top / in_all).dropna().rename(\"lift\").reset_index()\nlift = lift.merge(ts[[\"tags\", \"games\"]], on=\"tags\")\nlift[\"pct_top\"] = lift.tags.map(in_top) * 100\nlift[\"pct_all\"] = lift.tags.map(in_all) * 100\nlift = lift.nlargest(15, \"lift\")\n\nshow = set(ts.nlargest(5, \"games\").tags) | set(ts.nlargest(8, \"median_reviews\").tags)\npts = alt.Chart(ts).mark_circle(size=40, color=BLUE, opacity=0.7).encode(\n    x=alt.X(\"games:Q\", scale=alt.Scale(type=\"log\"), title=\"Games with this tag (log scale)\"),\n    y=alt.Y(\"median_reviews:Q\", title=\"Median reviews per game\"),\n    tooltip=[alt.Tooltip(\"tags:N\", title=\"Tag\"), alt.Tooltip(\"games:Q\", format=\",\"),\n             alt.Tooltip(\"median_reviews:Q\", title=\"Median reviews\")],\n)\ntxt = alt.Chart(ts[ts.tags.isin(show)]).mark_text(align=\"left\", dx=6, dy=-5, fontSize=10, color=\"#555\").encode(\n    x=\"games:Q\", y=\"median_reviews:Q\", text=\"tags:N\")\na = (pts + txt).properties(width=380, height=320, title=alt.Title(\n    \"Tags: how crowded vs attention per game\", subtitle=\"Tags on 300+ games. Hover for names\"))\nbars = alt.Chart(lift).mark_bar(color=BLUE, cornerRadiusTopRight=3, cornerRadiusBottomRight=3).encode(\n    y=alt.Y(\"tags:N\", sort=\"-x\", title=None),\n    x=alt.X(\"lift:Q\", title=\"Times more common in top 1% games\"),\n    tooltip=[alt.Tooltip(\"tags:N\", title=\"Tag\"), alt.Tooltip(\"lift:Q\", format=\".1f\", title=\"Times more common\"),\n             alt.Tooltip(\"pct_top:Q\", format=\".1f\", title=\"% of top 1% games\"),\n             alt.Tooltip(\"pct_all:Q\", format=\".1f\", title=\"% of all tagged games\")],\n)\nrule = alt.Chart().mark_rule(color=\"#888\", strokeDash=[3, 3]).encode(x=alt.datum(1))\nb = (bars + rule).properties(width=280, height=320, title=alt.Title(\n    \"Tags most over-represented in the top 1%\", subtitle=f\"Top 1% = {cut1:,.0f}+ reviews. Dashed line = same as average\"))\nmo.ui.altair_chart(a | b)"
+        },
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'txt' was defined by another cell",
+          "traceback": [],
+          "code": "tagged = coh[coh.has_tags]\nte = explode(tagged, \"tags\")\nts = (te.groupby(\"tags\").agg(games=(\"app_id\", \"size\"), median_reviews=(\"total_reviews\", \"median\"))\n      .reset_index())\nts = ts[ts.games >= 300]\ncut1 = tagged.total_reviews.quantile(0.99)\ntopg = tagged[tagged.total_reviews >= cut1]\nin_top = explode(topg, \"tags\").groupby(\"tags\").app_id.nunique() / len(topg)\nin_all = te.groupby(\"tags\").app_id.nunique() / len(tagged)\nlift = (in_top / in_all).dropna().rename(\"lift\").reset_index()\nlift = lift.merge(ts[[\"tags\", \"games\"]], on=\"tags\")\nlift[\"pct_top\"] = lift.tags.map(in_top) * 100\nlift[\"pct_all\"] = lift.tags.map(in_all) * 100\nlift = lift.nlargest(15, \"lift\")\n\nshow = set(ts.nlargest(5, \"games\").tags) | set(ts.nlargest(8, \"median_reviews\").tags)\npts = alt.Chart(ts).mark_circle(size=40, color=BLUE, opacity=0.7).encode(\n    x=alt.X(\"games:Q\", scale=alt.Scale(type=\"log\"), title=\"Games with this tag (log scale)\"),\n    y=alt.Y(\"median_reviews:Q\", title=\"Median reviews per game\"),\n    tooltip=[alt.Tooltip(\"tags:N\", title=\"Tag\"), alt.Tooltip(\"games:Q\", format=\",\"),\n             alt.Tooltip(\"median_reviews:Q\", title=\"Median reviews\")],\n)\ntxt = alt.Chart(ts[ts.tags.isin(show)]).mark_text(align=\"left\", dx=6, dy=-5, fontSize=10, color=\"#555\").encode(\n    x=\"games:Q\", y=\"median_reviews:Q\", text=\"tags:N\")\na = (pts + txt).properties(width=380, height=320, title=alt.Title(\n    \"Tags: how crowded vs attention per game\", subtitle=\"Tags on 300+ games. Hover for names\"))\nbars = alt.Chart(lift).mark_bar(color=BLUE, cornerRadiusTopRight=3, cornerRadiusBottomRight=3).encode(\n    y=alt.Y(\"tags:N\", sort=\"-x\", title=None),\n    x=alt.X(\"lift:Q\", title=\"Times more common in top 1% games\"),\n    tooltip=[alt.Tooltip(\"tags:N\", title=\"Tag\"), alt.Tooltip(\"lift:Q\", format=\".1f\", title=\"Times more common\"),\n             alt.Tooltip(\"pct_top:Q\", format=\".1f\", title=\"% of top 1% games\"),\n             alt.Tooltip(\"pct_all:Q\", format=\".1f\", title=\"% of all tagged games\")],\n)\nrule = alt.Chart().mark_rule(color=\"#888\", strokeDash=[3, 3]).encode(x=alt.datum(1))\nb = (bars + rule).properties(width=280, height=320, title=alt.Title(\n    \"Tags most over-represented in the top 1%\", subtitle=f\"Top 1% = {cut1:,.0f}+ reviews. Dashed line = same as average\"))\nmo.ui.altair_chart(a | b)"
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TqIu",
+      "code_hash": "e82579ee0e6022b34130f69c9da1f100",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"exploration-7-how-attention-is-shared-out-q13\">Exploration 7. How attention is shared out (Q13)</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Vxnm",
+      "code_hash": "fe8a26a0df565f4054d8c1066e955dc1",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'a' was defined by another cell",
+          "traceback": [],
+          "code": "r = coh.total_reviews.sort_values(ascending=False).reset_index(drop=True)\nn, total = len(r), r.sum()\nt1, t10 = int(n * 0.01), int(n * 0.10)\ngroups = pd.DataFrame({\n    \"group\": [\"Top 1% of games\", \"Next 9%\", \"Bottom 90%\"],\n    \"games\": [t1, t10 - t1, n - t10],\n    \"share\": [r[:t1].sum() / total * 100, r[t1:t10].sum() / total * 100, r[t10:].sum() / total * 100],\n})\ngroups[\"label\"] = groups.share.map(lambda v: f\"{v:.0f}%\")\norder = groups.group.tolist()\na_bars = alt.Chart(groups).mark_bar(cornerRadiusTopRight=3, cornerRadiusBottomRight=3).encode(\n    y=alt.Y(\"group:N\", sort=order, title=None),\n    x=alt.X(\"share:Q\", title=\"% of all reviews\", scale=alt.Scale(domain=[0, 100])),\n    color=alt.Color(\"group:N\", scale=alt.Scale(domain=order, range=[BLUE, \"#8fbcef\", GRAY]), legend=None),\n    tooltip=[alt.Tooltip(\"group:N\", title=\"Group\"), alt.Tooltip(\"games:Q\", format=\",\", title=\"Games\"),\n             alt.Tooltip(\"share:Q\", format=\".1f\", title=\"% of all reviews\")],\n)\na_txt = a_bars.mark_text(align=\"left\", dx=5, fontSize=12, color=\"#191919\").encode(text=\"label:N\", color=alt.value(\"#191919\"))\na = (a_bars + a_txt).properties(width=300, height=180, title=alt.Title(\n    \"Share of all reviews held by each group of games\", subtitle=\"Games ranked by review count\"))\n\npubs = (explode(coh, \"publishers\").groupby(\"publishers\").total_reviews.sum()\n        .div(total).mul(100).rename(\"share\").nlargest(12).reset_index())\nb = alt.Chart(pubs).mark_bar(color=BLUE, cornerRadiusTopRight=3, cornerRadiusBottomRight=3).encode(\n    y=alt.Y(\"publishers:N\", sort=\"-x\", title=None),\n    x=alt.X(\"share:Q\", title=\"% of all reviews\"),\n    tooltip=[alt.Tooltip(\"publishers:N\", title=\"Publisher\"), alt.Tooltip(\"share:Q\", format=\".2f\", title=\"% of all reviews\")],\n).properties(width=300, height=300, title=\"Publishers with the most total reviews\")\nmo.ui.altair_chart(a | b)"
+        },
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'b' was defined by another cell",
+          "traceback": [],
+          "code": "r = coh.total_reviews.sort_values(ascending=False).reset_index(drop=True)\nn, total = len(r), r.sum()\nt1, t10 = int(n * 0.01), int(n * 0.10)\ngroups = pd.DataFrame({\n    \"group\": [\"Top 1% of games\", \"Next 9%\", \"Bottom 90%\"],\n    \"games\": [t1, t10 - t1, n - t10],\n    \"share\": [r[:t1].sum() / total * 100, r[t1:t10].sum() / total * 100, r[t10:].sum() / total * 100],\n})\ngroups[\"label\"] = groups.share.map(lambda v: f\"{v:.0f}%\")\norder = groups.group.tolist()\na_bars = alt.Chart(groups).mark_bar(cornerRadiusTopRight=3, cornerRadiusBottomRight=3).encode(\n    y=alt.Y(\"group:N\", sort=order, title=None),\n    x=alt.X(\"share:Q\", title=\"% of all reviews\", scale=alt.Scale(domain=[0, 100])),\n    color=alt.Color(\"group:N\", scale=alt.Scale(domain=order, range=[BLUE, \"#8fbcef\", GRAY]), legend=None),\n    tooltip=[alt.Tooltip(\"group:N\", title=\"Group\"), alt.Tooltip(\"games:Q\", format=\",\", title=\"Games\"),\n             alt.Tooltip(\"share:Q\", format=\".1f\", title=\"% of all reviews\")],\n)\na_txt = a_bars.mark_text(align=\"left\", dx=5, fontSize=12, color=\"#191919\").encode(text=\"label:N\", color=alt.value(\"#191919\"))\na = (a_bars + a_txt).properties(width=300, height=180, title=alt.Title(\n    \"Share of all reviews held by each group of games\", subtitle=\"Games ranked by review count\"))\n\npubs = (explode(coh, \"publishers\").groupby(\"publishers\").total_reviews.sum()\n        .div(total).mul(100).rename(\"share\").nlargest(12).reset_index())\nb = alt.Chart(pubs).mark_bar(color=BLUE, cornerRadiusTopRight=3, cornerRadiusBottomRight=3).encode(\n    y=alt.Y(\"publishers:N\", sort=\"-x\", title=None),\n    x=alt.X(\"share:Q\", title=\"% of all reviews\"),\n    tooltip=[alt.Tooltip(\"publishers:N\", title=\"Publisher\"), alt.Tooltip(\"share:Q\", format=\".2f\", title=\"% of all reviews\")],\n).properties(width=300, height=300, title=\"Publishers with the most total reviews\")\nmo.ui.altair_chart(a | b)"
+        },
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'order' was defined by another cell",
+          "traceback": [],
+          "code": "r = coh.total_reviews.sort_values(ascending=False).reset_index(drop=True)\nn, total = len(r), r.sum()\nt1, t10 = int(n * 0.01), int(n * 0.10)\ngroups = pd.DataFrame({\n    \"group\": [\"Top 1% of games\", \"Next 9%\", \"Bottom 90%\"],\n    \"games\": [t1, t10 - t1, n - t10],\n    \"share\": [r[:t1].sum() / total * 100, r[t1:t10].sum() / total * 100, r[t10:].sum() / total * 100],\n})\ngroups[\"label\"] = groups.share.map(lambda v: f\"{v:.0f}%\")\norder = groups.group.tolist()\na_bars = alt.Chart(groups).mark_bar(cornerRadiusTopRight=3, cornerRadiusBottomRight=3).encode(\n    y=alt.Y(\"group:N\", sort=order, title=None),\n    x=alt.X(\"share:Q\", title=\"% of all reviews\", scale=alt.Scale(domain=[0, 100])),\n    color=alt.Color(\"group:N\", scale=alt.Scale(domain=order, range=[BLUE, \"#8fbcef\", GRAY]), legend=None),\n    tooltip=[alt.Tooltip(\"group:N\", title=\"Group\"), alt.Tooltip(\"games:Q\", format=\",\", title=\"Games\"),\n             alt.Tooltip(\"share:Q\", format=\".1f\", title=\"% of all reviews\")],\n)\na_txt = a_bars.mark_text(align=\"left\", dx=5, fontSize=12, color=\"#191919\").encode(text=\"label:N\", color=alt.value(\"#191919\"))\na = (a_bars + a_txt).properties(width=300, height=180, title=alt.Title(\n    \"Share of all reviews held by each group of games\", subtitle=\"Games ranked by review count\"))\n\npubs = (explode(coh, \"publishers\").groupby(\"publishers\").total_reviews.sum()\n        .div(total).mul(100).rename(\"share\").nlargest(12).reset_index())\nb = alt.Chart(pubs).mark_bar(color=BLUE, cornerRadiusTopRight=3, cornerRadiusBottomRight=3).encode(\n    y=alt.Y(\"publishers:N\", sort=\"-x\", title=None),\n    x=alt.X(\"share:Q\", title=\"% of all reviews\"),\n    tooltip=[alt.Tooltip(\"publishers:N\", title=\"Publisher\"), alt.Tooltip(\"share:Q\", format=\".2f\", title=\"% of all reviews\")],\n).properties(width=300, height=300, title=\"Publishers with the most total reviews\")\nmo.ui.altair_chart(a | b)"
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "DnEU",
+      "code_hash": "20c578a17e9b2d95160e7eaa30cced06",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"exploration-8-ai-disclosure-q10-q15\">Exploration 8. AI disclosure (Q10, Q15)</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ulZA",
+      "code_hash": "8be4d25d8a35a0fc0aa6801ac6d02509",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'a' was defined by another cell",
+          "traceback": [],
+          "code": "m = (ai.assign(month=ai.release_date.dt.to_period(\"M\").dt.to_timestamp())\n     .groupby(\"month\").agg(share=(\"has_ai_disclosure\", \"mean\"), games=(\"app_id\", \"size\"))\n     .reset_index())\nm[\"share\"] *= 100\na = alt.Chart(m).mark_line(color=BLUE, strokeWidth=2.5, point=alt.OverlayMarkDef(size=25, filled=True)).encode(\n    x=alt.X(\"month:T\", title=None, axis=alt.Axis(format=\"%b %Y\", tickCount=6)),\n    y=alt.Y(\"share:Q\", title=\"% of new games\", scale=alt.Scale(domain=[0, 100])),\n    tooltip=[alt.Tooltip(\"month:T\", format=\"%b %Y\", title=\"Month\"),\n             alt.Tooltip(\"share:Q\", format=\".1f\", title=\"% with AI disclosure\"),\n             alt.Tooltip(\"games:Q\", format=\",\", title=\"Games released\")],\n).properties(width=W, height=H, title=\"Share of new games with an AI disclosure\")\n\nby = (ai.groupby([\"release_year\", \"has_ai_disclosure\"])\n      .agg(median_reviews=(\"total_reviews\", \"median\"), games=(\"app_id\", \"size\")).reset_index())\nby[\"group\"] = by.has_ai_disclosure.map({True: \"AI disclosure\", False: \"No AI disclosure\"})\ndom = [\"No AI disclosure\", \"AI disclosure\"]\nb = alt.Chart(by).mark_bar(cornerRadiusTopLeft=3, cornerRadiusTopRight=3).encode(\n    x=alt.X(\"release_year:O\", title=\"Release year\", axis=alt.Axis(labelAngle=0)),\n    xOffset=alt.XOffset(\"group:N\", sort=dom),\n    y=alt.Y(\"median_reviews:Q\", title=\"Median reviews per game\"),\n    color=alt.Color(\"group:N\", scale=alt.Scale(domain=dom, range=[GRAY, BLUE]), title=None,\n                    legend=alt.Legend(orient=\"top\")),\n    tooltip=[alt.Tooltip(\"release_year:O\", title=\"Year\"), alt.Tooltip(\"group:N\", title=\"Group\"),\n             alt.Tooltip(\"median_reviews:Q\", title=\"Median reviews\"), alt.Tooltip(\"games:Q\", format=\",\")],\n).properties(width=W, height=H, title=alt.Title(\"Median reviews, AI vs no AI\",\n                                                subtitle=\"Compare within a year. Newer games have had less time\"))\nmo.vstack([mo.ui.altair_chart(a | b),\n           mo.md(\"Source: Steam Games from Jan2024 to Nov2026 (Kaggle).\")])"
+        },
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'b' was defined by another cell",
+          "traceback": [],
+          "code": "m = (ai.assign(month=ai.release_date.dt.to_period(\"M\").dt.to_timestamp())\n     .groupby(\"month\").agg(share=(\"has_ai_disclosure\", \"mean\"), games=(\"app_id\", \"size\"))\n     .reset_index())\nm[\"share\"] *= 100\na = alt.Chart(m).mark_line(color=BLUE, strokeWidth=2.5, point=alt.OverlayMarkDef(size=25, filled=True)).encode(\n    x=alt.X(\"month:T\", title=None, axis=alt.Axis(format=\"%b %Y\", tickCount=6)),\n    y=alt.Y(\"share:Q\", title=\"% of new games\", scale=alt.Scale(domain=[0, 100])),\n    tooltip=[alt.Tooltip(\"month:T\", format=\"%b %Y\", title=\"Month\"),\n             alt.Tooltip(\"share:Q\", format=\".1f\", title=\"% with AI disclosure\"),\n             alt.Tooltip(\"games:Q\", format=\",\", title=\"Games released\")],\n).properties(width=W, height=H, title=\"Share of new games with an AI disclosure\")\n\nby = (ai.groupby([\"release_year\", \"has_ai_disclosure\"])\n      .agg(median_reviews=(\"total_reviews\", \"median\"), games=(\"app_id\", \"size\")).reset_index())\nby[\"group\"] = by.has_ai_disclosure.map({True: \"AI disclosure\", False: \"No AI disclosure\"})\ndom = [\"No AI disclosure\", \"AI disclosure\"]\nb = alt.Chart(by).mark_bar(cornerRadiusTopLeft=3, cornerRadiusTopRight=3).encode(\n    x=alt.X(\"release_year:O\", title=\"Release year\", axis=alt.Axis(labelAngle=0)),\n    xOffset=alt.XOffset(\"group:N\", sort=dom),\n    y=alt.Y(\"median_reviews:Q\", title=\"Median reviews per game\"),\n    color=alt.Color(\"group:N\", scale=alt.Scale(domain=dom, range=[GRAY, BLUE]), title=None,\n                    legend=alt.Legend(orient=\"top\")),\n    tooltip=[alt.Tooltip(\"release_year:O\", title=\"Year\"), alt.Tooltip(\"group:N\", title=\"Group\"),\n             alt.Tooltip(\"median_reviews:Q\", title=\"Median reviews\"), alt.Tooltip(\"games:Q\", format=\",\")],\n).properties(width=W, height=H, title=alt.Title(\"Median reviews, AI vs no AI\",\n                                                subtitle=\"Compare within a year. Newer games have had less time\"))\nmo.vstack([mo.ui.altair_chart(a | b),\n           mo.md(\"Source: Steam Games from Jan2024 to Nov2026 (Kaggle).\")])"
+        }
+      ],
+      "console": []
+    }
+  ]
+}
